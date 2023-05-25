@@ -1,17 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Encriptador Oracle One</title>
-    <link rel="stylesheet" href="styles&reset/reset.css">
-    <link rel="stylesheet" href="styles&reset/styles.css">
+    <link rel="stylesheet" href="styles&reset/reset.css" />
+    <link rel="stylesheet" href="styles&reset/styles.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
     <script src="main.js" defer></script>
-</head>
-<body>
-    <main class="encriptador">
-        <object class="logo" data="svgs/Logo.svg" type="image/svg+xml" width="120" height="48"></object>
+  </head>
+  <body>
+    <header>
+      <object class="logo" data="svgs/Logo.svg" type="image/svg+xml"></object>
+    </header>
+    <main>
+      <section class="input">
+        <form id="inputForm">
+          <textarea
+            id="input-text"
+            name="input-text"
+            maxlength="230"
+            cols="40"
+            rows="9"
+            placeholder="Ingrese el texto aqui"
+          ></textarea>
+          <div class="menu">
+            <div class="alert">
+              <object
+                data="svgs/bi_exclamation-circle-fill.svg"
+                type="image/svg+xml"
+              ></object>
+              <p>Solo letras minúsculas y sin acentos</p>
+            </div>
+            <div class="buttons">
+              <button class="encrypt">Encriptar</button>
+              <button class="decrypt">Desencriptar</button>
+            </div>
+          </div>
+        </form>
+      </section>
+      <section class="output">
+        <object data="svgs/Muñeco.svg" type="image/svg+xml"></object>
+        <h2>Ningún mensaje fue encontrado</h2>
+        <p>Ingresa el texto que deseas encriptar o desencriptar</p>
+        <textarea
+          name="output-text"
+          id="output-text"
+          cols="30"
+          rows="10"
+        ></textarea>
+      </section>
     </main>
-</body>
+  </body>
 </html>
