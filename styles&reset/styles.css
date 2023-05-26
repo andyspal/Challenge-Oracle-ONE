@@ -18,14 +18,14 @@ main {
     justify-content: space-between;
     align-self: center;
     width: 80%;
-    height: 75vh;
 }
 
 form {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100%;
+    padding: 32px;
+    height: 600px;
 }
 
 #input-text {
@@ -41,6 +41,7 @@ form {
     overflow-y: hidden;
     resize: vertical;
     height: auto;
+    width: clamp(200px,80%,600px);
 }
 
 
@@ -82,18 +83,35 @@ button {
     height: 50px;
     border-radius: 24px;
     border: 1px solid ;
+    
+}
+button:hover{
     cursor: pointer;
 }
-
 .encrypt{
     background: #0A3871;
     color: #fff;
 }
-.decrypt{
+.encrypt:hover{
+    background-color: #356EA9;
+}
+.encrypt:active{
+    background-color: #609ED4;
+}
+.decrypt, .copy{
     background: transparent;
     border-color: #0A3871;
     color: #0A3871;
     
+}
+.decrypt:hover, .copy:hover{
+    background-color: #d6deff;
+}
+.decrypt:active, .copy:active{
+    background-color: #c4d0ff;
+}
+.copy{
+    display: none;
 }
 
 .output{
@@ -117,4 +135,18 @@ button {
 }
 #output-text{
     display: none;
+
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 24px;
+    font-weight: 400;
+    color: #495057;
+    height: 80%;
+    resize: none;
+}
+.copy-message{
+    margin-top: 10px;
+    transition: opacity 0.5s;
+    opacity: 0;
 }

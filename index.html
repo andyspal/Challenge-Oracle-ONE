@@ -29,7 +29,7 @@
             maxlength="230"
             cols="40"
             rows="9"
-            placeholder="Ingrese el texto aqui"
+            placeholder="Ingrese el texto aqui..."
           ></textarea>
           <div class="menu">
             <div class="alert">
@@ -40,22 +40,25 @@
               <p>Solo letras minúsculas y sin acentos</p>
             </div>
             <div class="buttons">
-              <button class="encrypt">Encriptar</button>
-              <button class="decrypt">Desencriptar</button>
+              <button class="encrypt" type="button">Encriptar</button>
+              <button class="decrypt" type="button">Desencriptar</button>
             </div>
           </div>
         </form>
       </section>
       <section class="output">
-        <object data="svgs/Muñeco.svg" type="image/svg+xml"></object>
-        <h2>Ningún mensaje fue encontrado</h2>
-        <p>Ingresa el texto que deseas encriptar o desencriptar</p>
+        <object data="svgs/Muñeco.svg" type="image/svg+xml" class="output-drawing"></object>
+        <h2 class="output-subtitle">Ningún mensaje fue encontrado</h2>
+        <p class="output-message">Ingresa el texto que deseas encriptar o desencriptar</p>
         <textarea
           name="output-text"
           id="output-text"
           cols="30"
           rows="10"
         ></textarea>
+        <p class="copy-message">Copiado</p>
+        <button type="button" class="copy">Copiar</button>
+        
       </section>
     </main>
   </body>
