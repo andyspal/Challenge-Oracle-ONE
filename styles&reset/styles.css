@@ -6,26 +6,29 @@ body {
     background-color: #F3F5FC;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    
 }
 
-.logo {
-    margin: 40px 0 0 40px;
+header{
+    padding: 40px;
 }
 
 main {
-    padding: 40px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-self: center;
-    width: 80%;
+    width: 100%;
+    gap: 10px;
 }
 
 form {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 32px;
-    height: 600px;
+    height: 620px;
+    
 }
 
 #input-text {
@@ -36,8 +39,6 @@ form {
     font-size: 32px;
     font-weight: 400;
     color: #0A3871;
-
-    padding: 16px;
     overflow-y: hidden;
     resize: vertical;
     height: auto;
@@ -115,7 +116,7 @@ button:hover{
 }
 
 .output{
-    width: 400px;
+    width: 30vw;
     background-color: #fff;
     display: flex;
     flex-direction: column;
@@ -125,6 +126,7 @@ button:hover{
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
     border-radius: 32px;
     gap: 16px;
+    height: 590px;
 }
 .output h2{
     font-weight: 700;
@@ -149,4 +151,63 @@ button:hover{
     margin-top: 10px;
     transition: opacity 0.5s;
     opacity: 0;
+}
+
+footer {
+    margin-top: 20px;
+    background-color: #E9ECF8;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .footer-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  footer p {
+    color: #757FB2;
+    font-size: 18px;
+    padding-bottom: 10px;
+  }
+
+ footer a{
+    text-decoration: none;
+    font-size: 18px;
+    color: #0A3871;
+    font-weight: 900;
+ }
+
+@media only screen and (max-width: 1200px){
+    main{
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .input{
+        display: flex;
+        justify-content: center;
+    }
+    form, .output, input{
+        width:80vw;
+    }
+    #input-text, #output-text{
+        width: 100%;
+    }
+    .outputContainer{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .buttons{
+        display: flex;
+        justify-content: center;
+    }
+    .buttons button{
+        width: 100%;
+    }
+    .output{
+        height: auto;
+    }
+
 }
